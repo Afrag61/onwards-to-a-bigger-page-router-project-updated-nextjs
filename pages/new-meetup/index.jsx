@@ -1,10 +1,11 @@
+import Layout from "@/components/layout/Layout";
 import NewMeetupForm from "@/components/meetups/NewMeetupForm";
 import { print } from "@/Print";
 
 const NewMeetupPage = () => {
-    const addMeetupHandler = (enteredMeetupData) => {
-        print(enteredMeetupData)
-    }
+  const addMeetupHandler = (enteredMeetupData) => {
+    print(enteredMeetupData);
+  };
 
   return (
     <>
