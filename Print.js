@@ -4,11 +4,11 @@ class Printer {
   }
 }
 
-export const print = (...args) => {
-  const j = new Printer();
+export const print = (...values) => {
+  const { print } = new Printer();
 
-  if (args.length > 0) {
-    return j.print(...args);
+  if (values.length > 0) {
+    return print(...values);
   }
 
   console.log("no data in params");
