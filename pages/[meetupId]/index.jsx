@@ -8,8 +8,8 @@ const MeetupDetails = () => {
         image={
           "https://alumni.ubc.ca/wp/wp-content/uploads/MyTownMeetups-1270x460-1.jpg"
         }
-        address={'Some Address 5, 12345 Some City'}
-        description={'this is A First Meetup'}
+        address={"Some Address 5, 12345 Some City"}
+        description={"this is A First Meetup"}
       />
     </>
   );

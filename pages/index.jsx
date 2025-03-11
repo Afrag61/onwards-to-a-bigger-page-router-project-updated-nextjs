@@ -1,4 +1,3 @@
-import Layout from "@/components/layout/Layout";
 import MeetupList from "@/components/meetups/MeetupList";
 
 const DUMMY_MEETUPS = [
@@ -20,12 +19,21 @@ const DUMMY_MEETUPS = [
   },
 ];
 
-const HomePage = () => {
+const HomePage = ({meetups}) => {
   return (
     <>
-      <MeetupList meetups={DUMMY_MEETUPS} />
+      <MeetupList meetups={meetups} />
     </>
   );
+};
+
+export const getStaticProps = async () => {
+  // fetch data from api
+  return {
+    props: {
+      meetups: DUMMY_MEETUPS,
+    },
+  };
 };
 
 export default HomePage;
