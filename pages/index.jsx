@@ -1,4 +1,5 @@
 import MeetupList from "@/components/meetups/MeetupList";
+import { print } from "@/Print";
 
 const DUMMY_MEETUPS = [
   {
@@ -27,14 +28,26 @@ const HomePage = ({ meetups }) => {
   );
 };
 
-export const getStaticProps = async () => {
+export const getServerSideProps = (context) => {
+  const req = context.req;
+  const res = context.res;
   // fetch data from api
+
   return {
     props: {
       meetups: DUMMY_MEETUPS,
     },
-    revalidate: 1,
   };
 };
+
+// export const getStaticProps = async () => {
+//   // fetch data from api
+//   return {
+//     props: {
+//       meetups: DUMMY_MEETUPS,
+//     },
+//     revalidate: 1,
+//   };
+// };
 
 export default HomePage;
