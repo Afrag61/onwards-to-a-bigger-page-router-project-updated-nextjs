@@ -19,10 +19,10 @@ const DUMMY_MEETUPS = [
   },
 ];
 
-const HomePage = ({meetups}) => {
+const HomePage = (props) => {
   return (
     <>
-      <MeetupList meetups={meetups} />
+      <MeetupList meetups={props.meetups} />
     </>
   );
 };
