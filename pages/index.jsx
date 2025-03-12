@@ -1,3 +1,5 @@
+import Head from "next/head";
+
 import { MongoClient } from "mongodb";
 
 import MeetupList from "@/components/meetups/MeetupList";
@@ -25,6 +27,13 @@ const DUMMY_MEETUPS = [
 const HomePage = ({ meetups }) => {
   return (
     <>
+      <Head>
+        <title>React Meetups</title>
+        <meta
+          name="description"
+          content="Brows a huge list of highly active react meetups!"
+        />
+      </Head>
       <MeetupList meetups={meetups} />
     </>
   );
